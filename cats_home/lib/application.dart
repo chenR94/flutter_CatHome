@@ -11,6 +11,10 @@ class Application extends StatelessWidget {
     Routes.configureRoutes(router);
     return MaterialApp(
       onGenerateRoute: router.generator,
+      theme: ThemeData(
+        colorScheme:
+            ThemeData().colorScheme.copyWith(primary: Color(0xff999999)),
+      ),
     );
   }
 }
