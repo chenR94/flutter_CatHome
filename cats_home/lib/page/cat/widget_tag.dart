@@ -1,8 +1,8 @@
 import 'package:cats_home/page/cat/widget_tab.dart';
 import 'package:flutter/material.dart';
 
-class CatTypeTab extends StatefulWidget {
-  final CatTabModel model;
+class CatTypeTab<T> extends StatefulWidget {
+  final T model;
   CatTypeTab({
     Key? key,
     required this.model,
