@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:cats_home/page/cat/add/event/index.dart';
 import 'package:cats_home/page/cat/add/index.dart';
 import 'package:cats_home/page/cat/add/variety/index.dart';
 import 'package:flutter/cupertino.dart';
@@ -74,11 +75,20 @@ class _TabMenuState extends State<TabMenu> {
   }
 
   void _onClickMenuIcon(int index, IconData icon) {
-    Future.delayed(Duration(milliseconds: 500), () {
-      Navigator.push(context, CupertinoPageRoute(builder: (context) {
-        return new AddCatPage();
-      }));
-    });
+    if (index == 0) {
+      Future.delayed(Duration(milliseconds: 500), () {
+        Navigator.push(context, CupertinoPageRoute(builder: (context) {
+          return new AddCatPage();
+        }));
+      });
+    }
+    // else {
+    //   Future.delayed(Duration(milliseconds: 500), () {
+    //     Navigator.push(context, CupertinoPageRoute(builder: (context) {
+    //       return new AddEventPage();
+    //     }));
+    //   });
+    // }
 
     // 回传消息
     widget.changeIndex(index);

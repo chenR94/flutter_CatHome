@@ -37,6 +37,8 @@ dependencies:
   shared_preferences: ^0.5.12
   flutter_picker: ^2.0.2
   image_picker: any
+  photo: any
+  photo_manager: any
 
 dev_dependencies:
   flutter_test:
