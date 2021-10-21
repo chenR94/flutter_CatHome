@@ -81,14 +81,13 @@ class _TabMenuState extends State<TabMenu> {
           return new AddCatPage();
         }));
       });
+    } else {
+      Future.delayed(Duration(milliseconds: 500), () {
+        Navigator.push(context, CupertinoPageRoute(builder: (context) {
+          return new AddEventPage();
+        }));
+      });
     }
-    // else {
-    //   Future.delayed(Duration(milliseconds: 500), () {
-    //     Navigator.push(context, CupertinoPageRoute(builder: (context) {
-    //       return new AddEventPage();
-    //     }));
-    //   });
-    // }
 
     // 回传消息
     widget.changeIndex(index);
