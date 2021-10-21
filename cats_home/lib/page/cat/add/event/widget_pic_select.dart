@@ -82,9 +82,10 @@ class _PhotosSelectViewState extends State<PhotosSelectView> {
       child: Center(
           child: GestureDetector(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              'name',
+              'lib/assets/images/cat/icon_img.png',
               height: 28,
               width: 28,
             ),
