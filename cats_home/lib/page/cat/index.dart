@@ -1,3 +1,5 @@
+import 'package:cats_home/Routes.dart';
+import 'package:cats_home/apppages.dart';
 import 'package:cats_home/page/cat/widget_catinfo.dart';
 import 'package:cats_home/page/cat/widget_choice_context.dart';
 import 'package:cats_home/page/cat/widget_sort_context.dart';
@@ -6,6 +8,7 @@ import 'package:cats_home/page/cat/widget_tabbar.dart';
 import 'package:cats_home/page/search/index.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 class CatsPage extends StatelessWidget {
@@ -94,10 +97,11 @@ class CatsPage extends StatelessWidget {
                                 BorderRadius.all(Radius.circular(15))),
                       ),
                       onTap: () {
-                        Navigator.push(context,
-                            CupertinoPageRoute(builder: (context) {
-                          return new SearchCatsPage();
-                        }));
+                        Get.toNamed(Routes.SEARCH);
+                        // Navigator.push(context,
+                        //     CupertinoPageRoute(builder: (context) {
+                        //   return new SearchCatsPage();
+                        // }));
                       },
                     ),
                   ),
